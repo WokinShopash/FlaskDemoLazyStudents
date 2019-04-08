@@ -1,3 +1,5 @@
 # Lazy students
 Ленивые студенты
-Запуск
+
+Запуск:  
+```python3 main.py --port [PORT]```
