@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Идеи</title>
+</head>
+<body>
+    <div>
+    {% if idea|length == 0 %}
+        Идей нет :(
+    {% endif %}
+    {% for idea in ideas %}
+       {{ idea["name"] }} предложил идею: "{{ idea["text"] }}" (
+        <form action="/free_button?id={{ idea['id'] }}" method="post">
+<!--            <input style="display: none" required name="id" type="text" value='{{ idea["id"] }}'>-->
+            <button type="submit">Освободить</button>
+        </form>
+        )
+        <br>
+    {% endfor %}
+        <a href="/group">На главную</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+</head>
+<body>
+    В группе сейчас {{ count }} студентов.
+    <form action="/ideas" method="get">
+        <button type="submit">Собрать идеи</button>
+    </form>
+
+    <form action="/add_button" method="post">
+        <input required name="name" type="text">
+        <button type="submit">Добавить студента</button>
+    </form>
+</body>
+</html>
